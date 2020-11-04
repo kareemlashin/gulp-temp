@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,QACE,iBAAkB,MAGpB,EACE,MAAO","file":"main.min.css","sourcesContent":["$color:green;\r\n.header {\r\n    background-color: $color;\r\n}\r\n\r\n* {\r\n    color: $color;\r\n}"]}

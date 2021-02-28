@@ -1,17 +1,6 @@
 .class {
     box-sizing: border-box;
     opacity: 1;
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    display: flex;
-    transition: 1s all;
-    -webkit-transition: 1s all;
-    -moz-transition: 1s all;
-    -ms-transition: 1s all;
-    -o-transition: 1s all;
 }
 
 * {

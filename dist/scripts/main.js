@@ -1,1 +1,1 @@
-console.log("ccccccccc"),console.log("ccccccccc"),console.log("ccccccccc"),console.log("ccccccccc"),console.log("ccccccccc"),console.log("ccccccccc");
+alert("ok"),alert("ok");

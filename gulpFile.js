@@ -22,7 +22,6 @@ gulp.task('taskname', () => {
         onLast: true
     })).
     pipe(livereload());
-
 });
 gulp.task('import', function() {
     gulp.src('src/*.html')
@@ -42,13 +41,9 @@ gulp.task('css', () => {
     return gulp.src("src/css/*.css").
     pipe(autoPrefixer('last 2 versions', 'safari 5', 'opera 12.1', 'ios 6', 'android 4', '> 1%', 'firefox >= 4', 'safari 7', 'safari 8', 'IE 8', 'IE 9', 'IE 10', 'IE 11')).
     pipe(concat('main.css')).
-    pipe(uglify()).
-    pipe(sourcemaps.write('.')).
     pipe(gulp.dest("dist/css")).
     pipe(notify("Hello css!")).
     pipe(livereload());
-
-
 });
 //sass
 gulp.task('sass', () => {
@@ -58,10 +53,8 @@ gulp.task('sass', () => {
     })).
     pipe(autoPrefixer('last 2 versions', 'safari 5', 'opera 12.1', 'ios 6', 'android 4', '> 1%', 'firefox >= 4', 'safari 7', 'safari 8', 'IE 8', 'IE 9', 'IE 10', 'IE 11')).
     pipe(concat('main.css')).
-    pipe(uglify()).
-    pipe(sourcemaps.write('.')).
     pipe(gulp.dest("dist/css")).
-    pipe(notify("Hello js!")).
+    pipe(notify("Hello scss!")).
     pipe(livereload());
 
 });
@@ -94,10 +87,14 @@ gulp.task('see', () => {
     livereload.listen();
 
     gulp.watch('src/index.html', gulp.series('taskname'));
-    gulp.watch('src/css/*.css', gulp.series('css'));
     gulp.watch('src/scss/*.scss', gulp.series('sass'));
     gulp.watch('src/scripts/*.js', gulp.series('js'));
     gulp.watch('src/pug/about.pug', gulp.series('pug'));
+    gulp.watch('src/**/*.html', gulp.series('import'));
+    gulp.watch('src/font/**/*.{eot,svg,ttf,woff,woff2}', gulp.series('fonts'));
+    gulp.watch('src/img/**/*.{png,jpg,ico,jpeg,gif}', gulp.series('img'));
+
+
     notifier.notify({
         title: 'Production Build',
         message: 'Done'

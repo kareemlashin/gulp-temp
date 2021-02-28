@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":["$color:green;\r\n.header {\r\n    background-color: $color;\r\n}\r\n\r\n* {\r\n    color: $color;\r\n}"],"file":"main.css"}
